@@ -1,0 +1,54 @@
+.hero{
+	display: flex;
+	flex-direction: column;
+	gap: 110px;
+	position:relative;
+}
+
+.curva{
+	position: absolute;
+	bottom: -55px;
+    left: 40px;
+}
+
+.strokeNdot {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.dot {
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: #EEAE3E;
+}
+
+.stroke {
+	width: 0.5px;
+	height: 100%;
+	background-color: #FFFFFF;
+}
+
+.hero h5{
+	font-size: medium;
+}
+
+@media (max-width: 800px) {
+    .strokeNdot > div{
+		display: none;
+	}
+
+	section {
+        gap: 10px;
+		padding: 20px !important;
+    }
+}
+
+/* Large screens (lg) */
+@media (min-width: 992px) {
+    section {
+        gap: 30px;
+    }
+}

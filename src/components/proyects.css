@@ -1,0 +1,61 @@
+section {
+	position: relative;
+}
+
+.curva2 {
+	position: absolute;
+	top: 0;
+	left: 89%;
+	transform: rotate(180deg);
+}
+
+.cards-container{
+	gap: 60px;
+}
+
+.proyect-card {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	height: fit-content;
+	cursor: pointer;
+}
+
+.image-container {
+	border: 1px solid #0b0b0b;
+	/* Opcional: solo para visualizar el contenedor */
+	border-radius: 20px;
+}
+
+.tech-logo {
+	width: 15px;
+	height: 15px;
+}
+
+.tech-pill {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 5px 10px;
+	border-radius: 20px;
+	border: 1px solid black;
+	font-size: 0.7em;
+	color: #fff;
+}
+
+.tech-pill.bootstrap {
+	background-color: #50356e;
+}
+
+.tech-pill.astro {
+	background-color: #65193E;
+}
+
+.tech-pill.tailwindcss {
+	background-color: #225C64;
+}
+
+.tech-pill.react {
+	background-color: #06434F;
+}

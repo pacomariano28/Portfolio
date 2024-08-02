@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Space Mono", monospace;
+}
+
+.App {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(60, 42, 89);
+	background: linear-gradient(0deg, rgba(60, 42, 89, 1) 0%, rgba(45, 33, 72, 1) 17%, rgba(39, 30, 65, 1) 34%, rgba(18, 18, 40, 1) 100%);
+	color: #D2D2D2;
+	background-repeat: no-repeat;
+}
+
+#imgTop{
+	position: relative;
+}
+
+#imgTop svg{
+	position: absolute;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	gap: 30vh;
+	margin-top: 20vh;
+	z-index: 0;
+}
+
+.gradient{
+	background: linear-gradient(to right, #FF8B4D 0%, #EDBD2A 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	align-items: baseline;
+	width: fit-content;
+}
+
+.card-gradient {
+    /* padding: 50px; */
+    border-radius: 18px;
+    border: 2px solid #3A2364;
+    background: rgb(40 30 66 / 0%);
+    /* background: linear-gradient(0deg, rgba(60, 42, 89, 1) 0%, rgb(90 69 138) 17%, rgba(39, 30, 65, 1) 34%, rgb(27 22 48) 100%); */
+    box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.43);
+    transition: all .3s ease;
+}
+
+.card-gradient:hover{
+	transform: scale(102%);
+}
+
+h1 {
+	font-weight: 750;
+	font-size: 4rem;
+}
+
+.App-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@media (max-width: 800px) {
+    .curva, .curva2, .curva3{
+		display: none;
+	}
+}
