@@ -33,85 +33,42 @@ export function Techs({ logo }) {
 
 
 	return (
-		/*<section className='container d-flex flex-column justify-content-center align-items-center'>
+		<section className='container d-flex flex-column justify-content-center align-items-center col-12 col-lg-10'>
 			<div className='d-flex flex-column justify-content-center col-lg-12 gap-5'>
-				<article>
+				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold'>FRONTEND</h2>
-					<div className="d-flex col-lg-12 gap-5 flex-wrap">
+					<div className="d-flex col-12 gap-3 flex-wrap justify-content-center">
 						{frontTechs.map((tech) => (
 							<img
 								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
 								alt={`${tech} logo`}
-								className="card-gradient col-lg-2 p-5"
+								className="card-gradient col-3 col-md-2 col-lg-1 p-3"
 							/>
 						))}
 					</div>
 				</article>
 
-				<article>
+				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold mt-5'>BACKEND</h2>
-					<div className="d-flex col-lg-12 gap-5 flex-wrap">
+					<div className="d-flex col-lg-12 gap-3 flex-wrap justify-content-center">
 						{backTechs.map((tech) => (
 							<img
 								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
 								alt={`${tech} logo`}
-								className="card-gradient col-lg-2 p-5"
+								className="card-gradient col-3 col-md-2 col-lg-1 p-3"
 							/>
 						))}
 					</div>
 				</article>
 
-				<article>
+				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold mt-5'>OTHER</h2>
-					<div className="d-flex col-lg-12 gap- flex-wrap">
+					<div className="d-flex col-12 gap-3 flex-wrap justify-content-center">
 						{otherTechs.map((tech) => (
 							<img
 								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
 								alt={`${tech} logo`}
-								className="card-gradient col-lg-2 p-5"
-							/>
-						))}
-					</div>
-				</article>
-			</div>
-		</section>*/
-
-		 <section className='container d-flex flex-column justify-content-center align-items-center col-10'>
-			<div className='d-flex flex-column justify-content-center col-lg-12 gap-5'>
-				<article>
-					<h2 className='gradient fw-bold'>FRONTEND</h2>
-					<div className="d-flex col-12 gap-3 flex-wrap">
-						{frontTechs.map((tech) => (
-							<img
-								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
-								alt={`${tech} logo`}
-								className="card-gradient col-2 col-lg-1 p-3"
-							/>
-						))}
-					</div>
-				</article>
-
-				<article>
-					<h2 className='gradient fw-bold mt-5'>BACKEND</h2>
-					<div className="d-flex col-lg-12 gap-3 flex-wrap">
-						{backTechs.map((tech) => (
-							<img
-								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
-								alt={`${tech} logo`}
-								className="card-gradient col-2 col-lg-1 p-3"
-							/>
-						))}
-					</div>
-				</article>
-
-				<article>
-					<h2 className='gradient fw-bold mt-5'>OTHER</h2>
-					<div className="d-flex col-12 gap-3 flex-wrap">
-						{otherTechs.map((tech) => (
-							<img
-								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
-								alt={`${tech} logo`}
-								className="card-gradient col-2 col-lg-1 p-3"
+								className="card-gradient col-3 col-md-2 col-lg-1 p-3"
 							/>
 						))}
 					</div>

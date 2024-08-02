@@ -72,8 +72,12 @@ h1 {
 	color: #61dafb;
 }
 
-@media (max-width: 800px) {
-    .curva, .curva2, .curva3{
+footer{
+	background-color:rgb(18 18 40);
+}
+
+@media (width < 1000px) {
+    .curva, .curva2, .curva3, .strokeNdot > div{
 		display: none;
 	}
 }

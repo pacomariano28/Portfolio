@@ -17,7 +17,7 @@ export function About() {
 					</p>
 				</aside>
 
-				<img className='col-lg-3 col-8 order-1 order-lg-2 image about_img' src="https://cdn.intra.42.fr/users/bb7e4e90140bf5eb75ba0d5040599a25/frmarian.jpg" alt="" />
+				<img className='col-lg-3 col-6 col-md-4 order-1 order-lg-2 image about_img' src="https://cdn.intra.42.fr/users/bb7e4e90140bf5eb75ba0d5040599a25/frmarian.jpg" alt="" />
 			</article>
 
 			<svg className="curva3" width="86" height="81" viewBox="0 0 86 81" fill="none" xmlns="http://www.w3.org/2000/svg">

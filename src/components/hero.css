@@ -35,12 +35,8 @@
 	font-size: medium;
 }
 
-@media (max-width: 800px) {
-    .strokeNdot > div{
-		display: none;
-	}
-
-	section {
+@media ( width < 1000px) {
+    section {
         gap: 10px;
 		padding: 20px !important;
     }
