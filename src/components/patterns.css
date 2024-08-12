@@ -1,0 +1,17 @@
+.patterns{
+	z-index: 0;
+	height: 100%;
+}
+
+.patterns img
+{
+	width: 100%;
+}
+
+#top1{
+	bottom: 50%;
+}
+
+#top2{
+	bottom: 0
+}

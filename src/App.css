@@ -1,30 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-*{
+:root {
+	--bg-main: #000000;
+	--bg-font: linear-gradient(to right, #e07a43 0%, #c19920 100%);
+	--bg-card: none;
+	/* --bg-card: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgba(0, 0, 0, 1) 60%); */
+	/*linear-gradient(180deg, rgba(35, 26, 61, 1) 0%, rgba(45, 34, 77, 1) 1%, rgba(42, 32, 72, 1) 16%, rgba(33, 25, 58, 1) 30%, rgba(31, 24, 56, 1) 35%, rgba(18, 18, 40, 1) 100%)*/
+}
+
+* {
 	margin: 0px;
 	padding: 0px;
 	font-family: "Space Mono", monospace;
 }
 
+/* .App {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(26, 20, 46);
+	background: linear-gradient(180deg, rgba(26, 20, 46, 1) 0%, rgba(28, 22, 48, 1) 7%, rgba(28, 21, 47, 1) 13%, rgba(33, 25, 58, 1) 30%, rgba(31, 24, 56, 1) 35%, rgba(18, 18, 40, 1) 100%);
+	color: #D2D2D2;
+	background-repeat: no-repeat;
+	gap:20vw
+	
+} */
+
 .App {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background: rgb(60, 42, 89);
-	background: linear-gradient(0deg, rgba(60, 42, 89, 1) 0%, rgba(45, 33, 72, 1) 17%, rgba(39, 30, 65, 1) 34%, rgba(18, 18, 40, 1) 100%);
+	background: var(--bg-main);
 	color: #D2D2D2;
 	background-repeat: no-repeat;
+	gap: 20vw
 }
 
-#imgTop{
-	position: relative;
+.App> :not(:first-child) {
+	z-index: 2;
 }
 
-#imgTop svg{
-	position: absolute;
-}
-
-main{
+main {
 	display: flex;
 	flex-direction: column;
 	gap: 30vh;
@@ -32,8 +48,30 @@ main{
 	z-index: 0;
 }
 
-.gradient{
-	background: linear-gradient(to right, #FF8B4D 0%, #EDBD2A 100%);
+.gradient {
+	background: var(--bg-font);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	align-items: baseline;
+	width: fit-content;
+}
+
+/* .card-gradient {
+	border-radius: 18px;
+	border: 1px solid #282431;
+	background: linear-gradient(180deg, rgba(35, 26, 61, 1) 0%, rgba(45, 34, 77, 1) 1%, rgba(42, 32, 72, 1) 16%, rgba(33, 25, 58, 1) 30%, rgba(31, 24, 56, 1) 35%, rgba(18, 18, 40, 1) 100%);
+	box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.2);
+	transition: all .3s ease;
+} */
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.hero h3{
+	background: var(--bg-font);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	align-items: baseline;
@@ -41,22 +79,68 @@ main{
 }
 
 .card-gradient {
-    /* padding: 50px; */
-    border-radius: 18px;
-    border: 2px solid #3A2364;
-    background: rgb(40 30 66 / 0%);
-    /* background: linear-gradient(0deg, rgba(60, 42, 89, 1) 0%, rgb(90 69 138) 17%, rgba(39, 30, 65, 1) 34%, rgb(27 22 48) 100%); */
-    box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.43);
-    transition: all .3s ease;
+	position: relative;
+	border-radius: 18px;
+	border: 1px solid #282431;
+	background: var(--bg-main);
+	box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.2);
+	transition: transform .3s ease, color .5s ease;
+
+	&:hover {
+		transform: scale(102%);
+		color: var(--bg-main);
+
+		& h3{
+			color: red !important;
+		}
+	}
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		width: 102%;
+		height: 102%;
+		background-image: conic-gradient(from var(--angle), #e07a43, #c19920, #e07a43);
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		z-index: -1;
+		padding: 3px;
+		border-radius: 10px;
+		animation: 3s spin linear infinite;
+	}
+
+	&::before {
+		filter: blur(1.5rem);
+		opacity: 0.7;
+	}
+
+	&:not(.experiencia) {
+		view-timeline-name: --card;
+		view-timeline-axis: block;
+
+		animation-timeline: --card;
+		animation-name: show;
+
+		animation-range: entry 25% cover 40%;
+		animation-fill-mode: both;
+	}
 }
 
-.card-gradient:hover{
-	transform: scale(102%);
+@keyframes spin {
+	from {
+		--angle: 0deg
+	}
+
+	to {
+		--angle: 360deg;
+	}
 }
 
 h1 {
 	font-weight: 750;
-	font-size: 4rem;
+	font-size: 8rem;
 }
 
 .App-header {
@@ -72,12 +156,31 @@ h1 {
 	color: #61dafb;
 }
 
-footer{
-	background-color:rgb(18 18 40);
+footer {
+	background-color: #0d0d1c;
 }
 
 @media (width < 1000px) {
-    .curva, .curva2, .curva3, .strokeNdot > div{
+	h1 {
+		font-size: 4rem;
+	}
+
+	.curva,
+	.curva2,
+	.curva3,
+	.strokeNdot>div {
 		display: none;
+	}
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+		scale: 55%;
+	}
+
+	to {
+		opacity: 1;
+		scale: 100%;
 	}
 }

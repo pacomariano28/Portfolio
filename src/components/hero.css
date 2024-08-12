@@ -3,6 +3,7 @@
 	flex-direction: column;
 	gap: 110px;
 	position:relative;
+	margin-top: 25vh;
 }
 
 .curva{

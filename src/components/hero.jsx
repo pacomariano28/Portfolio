@@ -2,9 +2,9 @@ import './hero.css'
 
 export function Hero() {
 	return (
-		<section className='hero container col-12 col-lg-10 p-sm-0'>
+		<section className='hero container w-100'>
 			<div className='d-flex flex-column align-items-start'>
-				<h1 className="gradient">PacoDev</h1>
+				<h1 className="gradient">Frmarian</h1>
 				<span>Passionate <span className='text-warning'>web developer</span> and UI/UX designer</span>
 				<div className="d-flex gap-3 align-items-center mt-lg-0 mt-4">
 					<span className="p-2 badge rounded-pill text-success border border-success">AVAIBLE FOR WORK</span>
@@ -22,7 +22,7 @@ export function Hero() {
 			<article className='d-flex justify-content-center  align-items-center w-100'>
 				<div className='d-flex flex-column gap-3 col-lg-9 col-md-11 col-12'>
 					<h2 className="gradient fw-bold fs-3">EXPERIENCE</h2>
-					<section className="d-flex card-gradient p-1 p-lg-4">
+					<section className="experiencia d-flex card-gradient p-1 p-lg-4">
 						<aside className='d-flex flex-column align-items-center strokeNdot'>
 							<div className="dot"></div>
 							<div className="stroke"></div>
@@ -30,7 +30,7 @@ export function Hero() {
 
 						<aside className="d-flex flex-column">
 							<section className='d-flex flex-column gap-1 mb-1'>
-								<h3 className="gradient m-0 fs-4">Intern <strong>at Viewnext</strong></h3>
+								<h3 className="m-0 fs-4">Intern <strong>at Viewnext</strong></h3>
 								<small>March - 2023</small>
 							</section>
 

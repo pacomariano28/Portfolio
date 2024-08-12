@@ -8,6 +8,7 @@
 	backdrop-filter: blur(5px);
 	z-index: 99;
 	gap: 5vw;
+	background-image: ("../img/top1.png");
 }
 
 #header a{
@@ -26,4 +27,8 @@
 
 .headerChild:hover{
 	transform: scale(110%);
+}
+
+#header svg{
+	transform: scale(60%);
 }

@@ -5,18 +5,16 @@ import { Proyects } from './components/proyects';
 import { Techs } from './components/techs';
 import { About } from './components/about';
 import { Footer } from './components/footer';
+import { Patterns } from './components/patterns.';
 
 function App() {
 	return (
 		<div className="App">
-			<Header/>
-			<main>
-				<Hero/>
-				<Proyects/>
-				<Techs/>
-				<About/>
-			</main>
-			<Footer/>
+			<Header />
+			<Hero />
+			<Proyects />
+			<Techs />
+			<Footer />
 		</div>
 	);
 }

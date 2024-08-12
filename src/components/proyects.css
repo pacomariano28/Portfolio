@@ -2,12 +2,21 @@ section {
 	position: relative;
 }
 
+/* .proyects_container{
+	background-image: url("../img/project_bg.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	filter: drop-shadow(0 0 150px rgba(0, 0, 0, 0.5) );
+} */
+
+
 .curva2 {
 	position: absolute;
 	top: 0;
 	left: 89%;
 	transform: rotate(180deg);
 }
+Frmarian
 
 .cards-container{
 	gap: 60px;
