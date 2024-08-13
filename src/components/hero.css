@@ -1,15 +1,25 @@
-.hero {
-    display: flex;
-    flex-direction: column;
-    gap: 46vh;
-    position: relative;
-    margin-top: 37vh;
+h1 {
+	& span {
+		animation: blink 1s linear infinite;
+	}
 }
 
-.curva{
+.hero {
+	display: flex;
+	flex-direction: column;
+	gap: 46vh;
+	position: relative;
+	margin-top: 37vh;
+
+	& h5 {
+		font-size: medium;
+	}
+}
+
+.curva {
 	position: absolute;
 	bottom: -55px;
-    left: 40px;
+	left: 40px;
 }
 
 .strokeNdot {
@@ -17,53 +27,45 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-}
 
-.dot {
-	width: 1em;
-	height: 1em;
-	border-radius: 50%;
-	background-color: #EEAE3E;
-}
+	& .dot {
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		background-color: #EEAE3E;
+	}
 
-.stroke {
-	width: 0.5px;
-	height: 100%;
-	background-color: #FFFFFF;
-}
-
-.hero h5{
-	font-size: medium;
-}
-
-h1 span {
-    animation: blink 1s linear infinite;
+	& .stroke {
+		width: 0.5px;
+		height: 100%;
+		background-color: #FFFFFF;
+	}
 }
 
 @keyframes blink {
-    0% {
-        opacity: 0;
-		
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
 
-
-@media ( width < 1000px) {
-    section {
-        gap: 10px;
+@media (width < 1000px) {
+	section {
+		gap: 10px;
 		padding: 20px !important;
-    }
+	}
 }
 
-/* Large screens (lg) */
 @media (min-width: 992px) {
-    section {
-        gap: 30px;
-    }
+	section {
+		gap: 30px;
+	}
 }

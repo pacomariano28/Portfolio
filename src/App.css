@@ -12,6 +12,7 @@
 	margin: 0px;
 	padding: 0px;
 	font-family: "Space Mono", monospace;
+	user-select: none;
 }
 
 /* .App {
@@ -33,7 +34,7 @@
 	background: var(--bg-main);
 	color: #D2D2D2;
 	background-repeat: no-repeat;
-	gap: 20vw
+	gap: 50vw
 }
 
 .App> :not(:first-child) {
@@ -78,6 +79,15 @@ main {
 	box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.2);
 	transition: transform .3s ease .1s, color .5s ease;
 
+	view-timeline-name: --card;
+	view-timeline-axis: block;
+
+	animation-timeline: --card;
+	animation-name: show;
+
+	animation-range: entry 25% cover 40%;
+	animation-fill-mode: both;
+
 	&:hover {
 		transform: scale(102%);
 		color: var(--bg-main);
@@ -102,17 +112,6 @@ main {
 	&::before {
 		filter: blur(1.5rem);
 		opacity: 0.7;
-	}
-
-	&:not(.experiencia) {
-		view-timeline-name: --card;
-		view-timeline-axis: block;
-
-		animation-timeline: --card;
-		animation-name: show;
-
-		animation-range: entry 25% cover 40%;
-		animation-fill-mode: both;
 	}
 }
 

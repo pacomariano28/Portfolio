@@ -54,8 +54,6 @@ export function Hero() {
 								</aside>
 							</section>
 						</aside>
-
-
 					</section>
 				</div>
 			</article>
