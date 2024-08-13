@@ -1,9 +1,9 @@
-.hero{
-	display: flex;
-	flex-direction: column;
-	gap: 110px;
-	position:relative;
-	margin-top: 25vh;
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 46vh;
+    position: relative;
+    margin-top: 37vh;
 }
 
 .curva{
@@ -35,6 +35,24 @@
 .hero h5{
 	font-size: medium;
 }
+
+h1 span {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+		
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 @media ( width < 1000px) {
     section {

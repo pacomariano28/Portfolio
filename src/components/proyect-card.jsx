@@ -3,7 +3,7 @@ import './proyects.css';
 
 const ProyectCard = ({ title, techs, text, image }) => {
 	return (
-		<article className="proyect-card d-flex flex-column flex-lg-row align-items-center card-gradient p-lg-5 p-4">
+		<article className="proyect-card d-flex flex-column flex-lg-row align-items-center card-gradient">
 			<div className="image-container col-12 col-lg-5 col-md-11 mb-4 mb-lg-0">
 				<img src={image} alt="proyect img" className='img-fluid rounded-4' />
 			</div>

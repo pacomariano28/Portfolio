@@ -70,29 +70,17 @@ main {
 	inherits: false;
 }
 
-.hero h3{
-	background: var(--bg-font);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	align-items: baseline;
-	width: fit-content;
-}
-
 .card-gradient {
 	position: relative;
 	border-radius: 18px;
 	border: 1px solid #282431;
 	background: var(--bg-main);
 	box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.2);
-	transition: transform .3s ease, color .5s ease;
+	transition: transform .3s ease .1s, color .5s ease;
 
 	&:hover {
 		transform: scale(102%);
 		color: var(--bg-main);
-
-		& h3{
-			color: red !important;
-		}
 	}
 
 	&::after,
