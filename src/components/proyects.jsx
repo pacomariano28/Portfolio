@@ -4,7 +4,7 @@ import './proyects.css';
 export function Proyects() {
 	return (
 		<section className='proyects_container d-flex align-items-center justify-content-center w-100'>
-			<div className='col-lg-8 col-11'>
+			<div className='col-lg-8 col-12'>
 				<svg className='curva2' width="86" height="81" viewBox="0 0 86 81" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<mask id="path-1-outside-1_199_1091" maskUnits="userSpaceOnUse" x="0" y="0" width="86" height="81" fill="black">
 						<rect fill="white" width="86" height="81" />

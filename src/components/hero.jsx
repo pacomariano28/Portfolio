@@ -5,8 +5,8 @@ export function Hero() {
 		<section className='hero container w-100'>
 			<div className='d-flex flex-column align-items-start'>
 				<h1 className="gradient">Frmarian<span className='gradient'>|</span></h1>
-				<span>Passionate <span className='text-warning'>web developer</span> and UI/UX designer</span>
-				<div className="d-flex gap-3 align-items-center mt-lg-0 mt-4">
+				<span className='ms-2'><span className='text-warning'>Web developer</span> and UI/UX designer</span>
+				<div className="d-flex gap-3 align-items-center mt-lg-0 mt-4 ms-1">
 					<span className="p-2 badge rounded-pill text-success border border-success">AVAIBLE FOR WORK</span>
 					<span className="fs-3 text-warning">|</span>
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-cv" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EDAC40" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -30,7 +30,7 @@ export function Hero() {
 
 						<aside className="d-flex flex-column">
 							<section className='d-flex flex-column gap-1 mb-1'>
-								<h3 className="m-0 fs-4">Intern <strong>at Viewnext</strong></h3>
+								<h3 className="m-0 fs-4 gradient">Intern <strong>at Viewnext</strong></h3>
 								<small>March - 2023</small>
 							</section>
 

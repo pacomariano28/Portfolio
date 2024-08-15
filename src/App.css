@@ -4,8 +4,7 @@
 	--bg-main: #000000;
 	--bg-font: linear-gradient(to right, #e07a43 0%, #c19920 100%);
 	--bg-card: none;
-	/* --bg-card: linear-gradient(180deg, rgb(16, 16, 16) 0%, rgba(0, 0, 0, 1) 60%); */
-	/*linear-gradient(180deg, rgba(35, 26, 61, 1) 0%, rgba(45, 34, 77, 1) 1%, rgba(42, 32, 72, 1) 16%, rgba(33, 25, 58, 1) 30%, rgba(31, 24, 56, 1) 35%, rgba(18, 18, 40, 1) 100%)*/
+	--blur-spread:1.5rem;
 }
 
 * {
@@ -15,18 +14,6 @@
 	user-select: none;
 }
 
-/* .App {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	background: rgb(26, 20, 46);
-	background: linear-gradient(180deg, rgba(26, 20, 46, 1) 0%, rgba(28, 22, 48, 1) 7%, rgba(28, 21, 47, 1) 13%, rgba(33, 25, 58, 1) 30%, rgba(31, 24, 56, 1) 35%, rgba(18, 18, 40, 1) 100%);
-	color: #D2D2D2;
-	background-repeat: no-repeat;
-	gap:20vw
-	
-} */
-
 .App {
 	display: flex;
 	align-items: center;
@@ -34,19 +21,25 @@
 	background: var(--bg-main);
 	color: #D2D2D2;
 	background-repeat: no-repeat;
-	gap: 50vw
+	gap: 40vw
 }
 
-.App> :not(:first-child) {
-	z-index: 2;
+h1 {
+	font-weight: 750;
+	font-size: 8rem;
 }
 
-main {
+.App-header {
 	display: flex;
 	flex-direction: column;
-	gap: 30vh;
-	margin-top: 20vh;
-	z-index: 0;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+footer {
+	background-color: #0d0d1c;
 }
 
 .gradient {
@@ -65,18 +58,16 @@ main {
 	transition: all .3s ease;
 } */
 
-@property --angle {
-	syntax: "<angle>";
-	initial-value: 0deg;
-	inherits: false;
-}
-
 .card-gradient {
+
+	--clr1: #e07a43;
+	--clr2: #c19920;
+	
 	position: relative;
 	border-radius: 18px;
-	border: 1px solid #282431;
-	background: var(--bg-main);
-	box-shadow: inset 3px -1px 20px 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid var(--clr1);
+	
+
 	transition: transform .3s ease .1s, color .5s ease;
 
 	view-timeline-name: --card;
@@ -90,29 +81,13 @@ main {
 
 	&:hover {
 		transform: scale(102%);
-		color: var(--bg-main);
 	}
+}
 
-	&::after,
-	&::before {
-		content: '';
-		position: absolute;
-		width: 102%;
-		height: 102%;
-		background-image: conic-gradient(from var(--angle), #e07a43, #c19920, #e07a43);
-		top: 50%;
-		left: 50%;
-		translate: -50% -50%;
-		z-index: -1;
-		padding: 3px;
-		border-radius: 10px;
-		animation: 3s spin linear infinite;
-	}
-
-	&::before {
-		filter: blur(1.5rem);
-		opacity: 0.7;
-	}
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
 }
 
 @keyframes spin {
@@ -123,28 +98,6 @@ main {
 	to {
 		--angle: 360deg;
 	}
-}
-
-h1 {
-	font-weight: 750;
-	font-size: 8rem;
-}
-
-.App-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
-
-.App-link {
-	color: #61dafb;
-}
-
-footer {
-	background-color: #0d0d1c;
 }
 
 @media (width < 1000px) {
