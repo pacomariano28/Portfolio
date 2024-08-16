@@ -4,7 +4,11 @@
 	--bg-main: #000000;
 	--bg-font: linear-gradient(to right, #e07a43 0%, #c19920 100%);
 	--bg-card: none;
-	--blur-spread:1.5rem;
+	--blur-spread: 1.5rem;
+}
+
+body{
+	overflow-x: hidden;
 }
 
 * {
@@ -21,7 +25,7 @@
 	background: var(--bg-main);
 	color: #D2D2D2;
 	background-repeat: no-repeat;
-	gap: 40vw
+	gap: 40vw;
 }
 
 h1 {
@@ -50,6 +54,43 @@ footer {
 	width: fit-content;
 }
 
+
+.float{
+	animation: float 1.5s ease-in-out infinite;
+}
+
+.float2{
+	animation: float2 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(-3px) perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+	}
+
+	50% {
+		transform: translateY(3px) perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+	}
+
+	100% {
+		transform: translateY(-3px) perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+	}
+}
+
+@keyframes float2 {
+	0% {
+		transform: translateY(-3px);
+	}
+
+	50% {
+		transform: translateY(3px);
+	}
+
+	100% {
+		transform: translateY(-3px);
+	}
+}
+
 /* .card-gradient {
 	border-radius: 18px;
 	border: 1px solid #282431;
@@ -62,14 +103,16 @@ footer {
 
 	--clr1: #e07a43;
 	--clr2: #c19920;
-	
+	--clr3: #c87e38;
+
 	position: relative;
 	border-radius: 18px;
-	border: 1px solid var(--clr1);
-	
+	border-left: 2px solid var(--clr1);
 
-	transition: transform .3s ease .1s, color .5s ease;
+	opacity: 0;
 
+	transition: transform .3s ease .1s, color .5s ease, border .2s .2s;
+/* 
 	view-timeline-name: --card;
 	view-timeline-axis: block;
 
@@ -77,10 +120,80 @@ footer {
 	animation-name: show;
 
 	animation-range: entry 25% cover 40%;
-	animation-fill-mode: both;
+	animation-fill-mode: both; */
 
 	&:hover {
 		transform: scale(102%);
+		border-left: 4px solid #c87e38;
+	}
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+		scale: 55%;
+	}
+
+	to {
+		opacity: 1;
+		scale: 100%;
+	}
+}
+
+.left-slide,
+.right-slide {
+	height: 10px;
+	width: 50vw;
+	border-radius: 40px;
+	background: #814728;
+	position: absolute;
+	top: -20vw;
+}
+
+
+.left-slide {
+	view-timeline-name: --left;
+	view-timeline-axis: block;
+
+	animation-timeline: --left;
+	animation-name: left-slide;
+
+	animation-range: entry 25% cover 40%;
+	animation-fill-mode: both;
+}
+
+@keyframes left-slide {
+	from {
+		transform: translateX(-100vw);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(-30vw);
+		opacity: 1;
+	}
+}
+
+.right-slide {
+	view-timeline-name: --right;
+	view-timeline-axis: block;
+
+	animation-timeline: --right;
+	animation-name: right-slide;
+
+	animation-range: entry 10% cover 50%;
+	animation-fill-mode: both;
+}
+
+@keyframes right-slide {
+	from {
+		transform: translateX(50vw);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(34vw);
+		opacity: 1;
 	}
 }
 
@@ -105,22 +218,39 @@ footer {
 		font-size: 4rem;
 	}
 
-	.curva,
+	.left-slide,
+	.right-slide{
+		display: none;
+	}
+
+	/* .curva,
 	.curva2,
 	.curva3,
 	.strokeNdot>div {
 		display: none;
-	}
+	} */
 }
 
-@keyframes show {
+@keyframes fadeIn {
 	from {
-		opacity: 0;
-		scale: 55%;
+	  opacity: 0;
+	  transform: translateY(20px);
 	}
-
 	to {
-		opacity: 1;
-		scale: 100%;
+	  opacity: 1;
+	  transform: translateY(0);
 	}
+  }
+  
+  .fade-in {
+	opacity: 0;
+	animation: fadeIn 1s forwards;
+  }
+  
+
+.curva,
+.curva2,
+.curva3,
+.strokeNdot>div {
+	display: none;
 }
