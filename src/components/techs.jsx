@@ -39,8 +39,9 @@ export function Techs({ logo }) {
 				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold'>FRONTEND</h2>
 					<div className="d-flex col-12 gap-3 flex-wrap justify-content-center">
-						{frontTechs.map((tech) => (
+						{frontTechs.map((tech, index) => (
 							<img
+								key={index}
 								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
 								alt={`${tech} logo`}
 								className="card-gradient col-3 col-md-2 col-lg-1 p-3"
@@ -52,8 +53,9 @@ export function Techs({ logo }) {
 				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold mt-5'>BACKEND</h2>
 					<div className="d-flex col-lg-12 gap-3 flex-wrap justify-content-center">
-						{backTechs.map((tech) => (
+						{backTechs.map((tech, index) => (
 							<img
+								key={index}
 								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
 								alt={`${tech} logo`}
 								className="card-gradient col-3 col-md-2 col-lg-1 p-3"
@@ -65,8 +67,9 @@ export function Techs({ logo }) {
 				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold mt-5'>OTHER</h2>
 					<div className="d-flex col-12 gap-3 flex-wrap justify-content-center">
-						{otherTechs.map((tech) => (
+						{otherTechs.map((tech, index) => (
 							<img
+								key={index}
 								src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech}/${tech}-original.svg`}
 								alt={`${tech} logo`}
 								className="card-gradient col-3 col-md-2 col-lg-1 p-3"

@@ -16,7 +16,6 @@ section {
 .proyect-card {
 	display: flex;
 	align-items: center;
-	gap: 20px;
 	padding: 20px;
 	height: fit-content;
 	cursor: pointer;
@@ -25,7 +24,7 @@ section {
 .image-container {
 	border: 1px solid #0b0b0b;
 	border-radius: 18px;
-	transform: perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+	/* transform: perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%); */
 	position: relative;
 
 	&::before {

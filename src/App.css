@@ -65,15 +65,15 @@ footer {
 
 @keyframes float {
 	0% {
-		transform: translateY(-3px) perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+		transform: translateY(-3px) /* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */;
 	}
 
 	50% {
-		transform: translateY(3px) perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+		transform: translateY(3px) /* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */;
 	}
 
 	100% {
-		transform: translateY(-3px) perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%);
+		transform: translateY(-3px) /* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */;
 	}
 }
 
@@ -99,6 +99,12 @@ footer {
 	transition: all .3s ease;
 } */
 
+/* .card-gradient.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+} */
+
 .card-gradient {
 
 	--clr1: #e07a43;
@@ -109,10 +115,8 @@ footer {
 	border-radius: 18px;
 	border-left: 2px solid var(--clr1);
 
-	opacity: 0;
-
 	transition: transform .3s ease .1s, color .5s ease, border .2s .2s;
-/* 
+
 	view-timeline-name: --card;
 	view-timeline-axis: block;
 
@@ -120,7 +124,7 @@ footer {
 	animation-name: show;
 
 	animation-range: entry 25% cover 40%;
-	animation-fill-mode: both; */
+	animation-fill-mode: both;
 
 	&:hover {
 		transform: scale(102%);
