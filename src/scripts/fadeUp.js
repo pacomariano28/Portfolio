@@ -1,16 +1,17 @@
-export const fadeUp = () => {
+export const FadeUp = () => {
     const sections = document.querySelectorAll('.card-gradient');
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            // Ajusta la clase basada en la visibilidad del elemento
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
+                entry.target.classList.add('fadeup');
             } else {
-                entry.target.classList.remove('is-visible'); // Remove the class when element is out of view
+                entry.target.classList.remove('fadeup');
             }
         });
     }, {
-        threshold: 0.1 // Trigger the effect when 10% of the element is visible
+        rootMargin: '0px 0px -10% 0px' // Margen para activar la animación antes de que el elemento esté completamente visible
     });
 
     sections.forEach(section => {

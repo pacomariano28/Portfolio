@@ -7,7 +7,7 @@
 	--blur-spread: 1.5rem;
 }
 
-body{
+body {
 	overflow-x: hidden;
 }
 
@@ -55,39 +55,27 @@ footer {
 }
 
 
-.float{
+.float {
 	animation: float 1.5s ease-in-out infinite;
-}
-
-.float2{
-	animation: float2 1.5s ease-in-out infinite;
 }
 
 @keyframes float {
 	0% {
-		transform: translateY(-3px) /* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */;
+		transform: translateY(-3px)
+			/* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */
+		;
 	}
 
 	50% {
-		transform: translateY(3px) /* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */;
+		transform: translateY(3px)
+			/* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */
+		;
 	}
 
 	100% {
-		transform: translateY(-3px) /* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */;
-	}
-}
-
-@keyframes float2 {
-	0% {
-		transform: translateY(-3px);
-	}
-
-	50% {
-		transform: translateY(3px);
-	}
-
-	100% {
-		transform: translateY(-3px);
+		transform: translateY(-3px)
+			/* perspective(460px) rotateX(5deg) rotateY(-11deg) translateX(-5%) */
+		;
 	}
 }
 
@@ -115,16 +103,18 @@ footer {
 	border-radius: 18px;
 	border-left: 2px solid var(--clr1);
 
-	transition: transform .3s ease .1s, color .5s ease, border .2s .2s;
+	transition: transform .3s ease .1s, color .5s ease, border-left .2s .2s;
 
-	view-timeline-name: --card;
+	opacity: 0;
+
+	/* view-timeline-name: --card;
 	view-timeline-axis: block;
 
 	animation-timeline: --card;
 	animation-name: show;
 
 	animation-range: entry 25% cover 40%;
-	animation-fill-mode: both;
+	animation-fill-mode: both; */
 
 	&:hover {
 		transform: scale(102%);
@@ -223,7 +213,7 @@ footer {
 	}
 
 	.left-slide,
-	.right-slide{
+	.right-slide {
 		display: none;
 	}
 
@@ -235,22 +225,24 @@ footer {
 	} */
 }
 
-@keyframes fadeIn {
+@keyframes fadeup {
 	from {
-	  opacity: 0;
-	  transform: translateY(20px);
+		opacity: 0;
+		transform: translateY(20px);
 	}
+
 	to {
-	  opacity: 1;
-	  transform: translateY(0);
+		opacity: 1;
+		transform: translateY(0);
 	}
-  }
-  
-  .fade-in {
+}
+
+.fadeup {
 	opacity: 0;
-	animation: fadeIn 1s forwards;
-  }
-  
+	animation: fadeup .5s forwards;
+	opacity: 1;
+}
+
 
 .curva,
 .curva2,

@@ -22,26 +22,6 @@ h1 {
 	left: 40px;
 }
 
-.strokeNdot {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	& .dot {
-		width: 1em;
-		height: 1em;
-		border-radius: 50%;
-		background-color: #EEAE3E;
-	}
-
-	& .stroke {
-		width: 0.5px;
-		height: 100%;
-		background-color: #FFFFFF;
-	}
-}
-
 @keyframes blink {
 	0% {
 		opacity: 0;
