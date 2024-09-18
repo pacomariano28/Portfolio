@@ -34,7 +34,6 @@ export function Techs({ logo }) {
 
 	return (
 		<section className='container d-flex flex-column justify-content-center align-items-center col-12 col-lg-10'>
-			<div className="right-slide"></div>
 			<div className='d-flex flex-column justify-content-center col-lg-12 gap-5'>
 				<article className='d-flex flex-column align-items-center'>
 					<h2 className='gradient fw-bold'>FRONTEND</h2>
